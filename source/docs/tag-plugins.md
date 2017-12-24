@@ -1,14 +1,12 @@
-title: Tag Plugins
+title: 标签插件（Tag Plugins）
 ---
-Tag plugins are different from post tags. They are ported from Octopress and provide a useful way for you to quickly add specific content to your posts.
+标签插件和 Front-matter 中的标签不同，它们是用于在文章中快速插入特定内容的插件。
 
-{% youtube I07XMi7MHd4 %}
+## 引用块
 
-## Block Quote
+在文章中插入引言，可包含作者、来源和标题。
 
-Perfect for adding quotes to your post, with optional author, source and title information.
-
-**Alias:** quote
+**别号：** quote
 
 ```
 {% blockquote [author[, source]] [link] [source_link_title] %}
@@ -16,9 +14,9 @@ content
 {% endblockquote %}
 ```
 
-### Examples
+### 样例
 
-**No arguments. Plain blockquote.**
+**没有提供参数，则只输出普通的 blockquote**
 
 ```
 {% blockquote %}
@@ -30,7 +28,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque hendrerit 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque hendrerit lacus ut purus iaculis feugiat. Sed nec tempor elit, quis aliquam neque. Curabitur sed diam eget dolor fermentum semper at eu lorem.
 {% endblockquote %}
 
-**Quote from a book**
+**引用书上的句子**
 
 ```
 {% blockquote David Levithan, Wide Awake %}
@@ -42,7 +40,7 @@ Do not just seek happiness for yourself. Seek happiness for all. Through kindnes
 Do not just seek happiness for yourself. Seek happiness for all. Through kindness. Through mercy.
 {% endblockquote %}
 
-**Quote from Twitter**
+**引用 Twitter**
 
 ```
 {% blockquote @DevDocs https://twitter.com/devdocs/status/356095192085962752 %}
@@ -54,7 +52,7 @@ NEW: DevDocs now comes with syntax highlighting. http://devdocs.io
 NEW: DevDocs now comes with syntax highlighting. http://devdocs.io
 {% endblockquote %}
 
-**Quote from an article on the web**
+**引用网络上的文章**
 
 ```
 {% blockquote Seth Godin http://sethgodin.typepad.com/seths_blog/2009/07/welcome-to-island-marketing.html Welcome to Island Marketing %}
@@ -66,11 +64,11 @@ Every interaction is both precious and an opportunity to delight.
 Every interaction is both precious and an opportunity to delight.
 {% endblockquote %}
 
-## Code Block
+## 代码块
 
-Useful feature for adding code snippets to your post.
+在文章中插入代码。
 
-**Alias:** code
+**别名：** code
 
 ```
 {% codeblock [title] [lang:language] [url] [link text] %}
@@ -78,9 +76,9 @@ code snippet
 {% endcodeblock %}
 ```
 
-### Examples
+### 样例
 
-**A plain code block**
+**普通的代码块**
 
 ```
 {% codeblock %}
@@ -92,7 +90,7 @@ alert('Hello World!');
 alert('Hello World!');
 {% endcodeblock %}
 
-**Specifying the language**
+**指定语言**
 
 ```
 {% codeblock lang:objc %}
@@ -104,7 +102,7 @@ alert('Hello World!');
 [rectangle setX: 10 y: 10 width: 20 height: 20];
 {% endcodeblock %}
 
-**Adding a caption to the code block**
+**附加说明**
 
 ```
 {% codeblock Array.map %}
@@ -116,7 +114,7 @@ array.map(callback[, thisArg])
 array.map(callback[, thisArg])
 {% endcodeblock %}
 
-**Adding a caption and a URL**
+**附加说明和网址**
 
 ```
 {% codeblock _.compact http://underscorejs.org/#compact Underscore.js %}
@@ -130,9 +128,9 @@ _.compact([0, 1, false, 2, '', 3]);
 => [1, 2, 3]
 {% endcodeblock %}
 
-## Backtick Code Block
+## 反引号代码块
 
-This is identical to using a code block, but instead uses three backticks to delimit the block.
+另一种形式的代码块，不同的是它使用三个反引号来包裹。
 
 {% raw %}
 &#96`` [language] [title] [url] [link text]
@@ -142,7 +140,7 @@ code snippet
 
 ## Pull Quote
 
-To add pull quotes to your posts:
+在文章中插入 Pull quote。
 
 ```
 {% pullquote [class] %}
@@ -152,7 +150,7 @@ content
 
 ## jsFiddle
 
-To embed a jsFiddle snippet:
+在文章中嵌入 jsFiddle。
 
 ```
 {% jsfiddle shorttag [tabs] [skin] [width] [height] %}
@@ -160,7 +158,7 @@ To embed a jsFiddle snippet:
 
 ## Gist
 
-To embed a Gist snippet:
+在文章中嵌入 Gist。
 
 ```
 {% gist gist_id [filename] %}
@@ -168,7 +166,7 @@ To embed a Gist snippet:
 
 ## iframe
 
-To embed an iframe:
+在文章中插入 iframe。
 
 ```
 {% iframe url [width] [height] %}
@@ -176,7 +174,7 @@ To embed an iframe:
 
 ## Image
 
-Inserts an image with specified size.
+在文章中插入指定大小的图片。
 
 ```
 {% img [class names] /path/to/image [width] [height] [title text [alt text]] %}
@@ -184,7 +182,7 @@ Inserts an image with specified size.
 
 ## Link
 
-Inserts a link with `target="_blank"` attribute.
+在文章中插入链接，并自动给外部链接添加 `target="_blank"` 属性。
 
 ```
 {% link text url [external] [title] %}
@@ -192,15 +190,15 @@ Inserts a link with `target="_blank"` attribute.
 
 ## Include Code
 
-Inserts code snippets in `source/downloads/code` folder.
+插入 `source` 文件夹内的代码文件。
 
 ```
 {% include_code [title] [lang:language] path/to/file %}
 ```
 
-## YouTube
+## Youtube
 
-Inserts a YouTube video.
+在文章中插入 Youtube 视频。
 
 ```
 {% youtube video_id %}
@@ -208,24 +206,24 @@ Inserts a YouTube video.
 
 ## Vimeo
 
-Inserts a Vimeo video.
+在文章中插入 Vimeo 视频。
 
 ```
 {% vimeo video_id %}
 ```
 
-## Include Posts
+## 引用文章
 
-Include links to other posts.
+引用其他文章的链接。
 
 ```
 {% post_path slug %}
 {% post_link slug [title] %}
 ```
 
-## Include Assets
+## 引用资源
 
-Include post assets.
+引用文章的资源。
 
 ```
 {% asset_path slug %}
@@ -235,23 +233,10 @@ Include post assets.
 
 ## Raw
 
-If certain content is causing processing issues in your posts, wrap it with the `raw` tag to avoid rendering errors.
+如果您想在文章中插入 Swig 标签，可以尝试使用 Raw 标签，以免发生解析异常。
 
 ```
 {% raw %}
 content
 {% endraw %}
-```
-
-
-## Post Excerpt
-
-Use text placed before the `<!-- more -->` tag as an excerpt for the post.
-
-**Examples:**
-
-``` 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-<!-- more -->
-Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 ```

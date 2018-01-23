@@ -1,10 +1,11 @@
 menu:
-  docs: Docs
-  api: API
-  news: Blogs
-  plugins: Plugins
-  themes: Themes
-  search: Search
+  home: Home
+  # api: API
+  blogs: Blogs
+  projects: Projects
+  # plugins: Plugins
+  # themes: Themes
+  # search: Search
 
 index:
   get_started: Get started

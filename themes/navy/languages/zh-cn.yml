@@ -1,10 +1,10 @@
 menu:
-  docs: 文档
-  api: API
-  news: 博客
-  plugins: 插件
-  themes: 主题
-  search: 搜索
+  home: 主页
+  blogs: 博客
+  projects: 开源项目
+  # plugins: 插件
+  # themes: 主题
+  # search: 搜索
 
 index:
   get_started: 开始使用
